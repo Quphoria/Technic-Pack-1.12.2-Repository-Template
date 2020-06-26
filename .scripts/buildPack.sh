@@ -5,7 +5,7 @@ modpack_config=modpack.json
 modpack_output_zip=modpack.zip
 build_folder=build
 workspace_path=$(pwd)
-download_forge_pattern='https://files.minecraftforge.net/maven/net/minecraftforge/forge/%version%/forge-%version%-universal.jar'
+download_forge_pattern='https://files.minecraftforge.net/maven/net/minecraftforge/forge/%version%/forge-%version%-installer.jar'
 
 url_download_list=()
 curse_mod_projectIds=()
@@ -31,7 +31,7 @@ function download_file {
     else
         progress_flag='-s'
     fi
-    curl -O -J -L --globoff --compressed $progress_flag "$download_url" || (echo "Failed to download $download_url" && exit 1)
+    curl -O -J -L --globoff --compressed $progress_flag "${download_url//[$'\t\r\n']}" || (echo "Failed to download $download_url" && exit 1)
 }
 
 function install_curse_mods {

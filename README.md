@@ -1,6 +1,6 @@
 # Technic Pack Repository Template
 
-This is my template for hosting modpacks for the [Technic Minecraft Launcher](https://www.technicpack.net/) on github.
+This is my template for hosting 1.12.2 modpacks for the [Technic Minecraft Launcher](https://www.technicpack.net/) on github.
 
 ## Usage
 
